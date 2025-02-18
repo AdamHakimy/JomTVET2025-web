@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Ditawarkan - TVET</title>
+    <link rel="stylesheet" href="styles.css">
+
+
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        header {
+            background: #0056b3;
+            color: white;
+            padding: 20px;
+        }
+        .logo-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .logo-container img {
+            max-width: 100%;
+            height: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #004494;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #004494;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            display: block;
+            text-align: left;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            background: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #0056b3;
+            color: white;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            nav a {
+                padding: 10px;
+            }
+        }
+
+        .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    width: 80%;
+    overflow: hidden;
+    background: #000;
+    margin: 20px auto;
+}
+
+/* Make iframe fill container */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Adjust for laptop screens */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .video-container {
+        width: 50%;  /* Smaller width on laptops */
+        padding-bottom: 28%; /* Adjust height for smaller display */
+    }
+}
+
+/* Adjust for large screens (e.g., desktops) */
+@media (min-width: 1441px) {
+    .video-container {
+        width: 40%;
+        padding-bottom: 22.5%;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/TVETLogo.png" alt="TVET Logo" width="200" height="150">
+        </div>
+        <h1>Program Ditawarkan</h1>
+    </header>
+    <nav>
+        <a href="utama.html">Utama</a>
+        <a href="program.html">Program Ditawarkan</a>
+        <div class="dropdown">
+            <a href="#">Leader</a>
+            <div class="dropdown-content">
+                <a href="#">Leader 1</a>
+                <a href="#">Leader 2</a>
+                <a href="#">Leader 3</a>
+            </div>
+        </div>
+        <a href="data.html">Data</a>
+    </nav>
+
+    <div class="container">
+        <div class="section">
+            <h2>Syarat Permohonan</h2>
+            <ul>
+                <li>Warganegara Malaysia</li>
+                <li>Berumur 15-25 Tahun</li>
+                <li>Boleh Membaca, Menulis & Mengira</li>
+                <li>Minat Dalam Kemahiran</li>
+                <li>Tiada atau Gagal SPM Layak Mohon</li>
+                <li>Pelajar Pondok atau Madrasah Digalakkan Mohon</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Program Yang Ditawarkan</h2>
+            <ul>
+                <li><strong>Elektrik:</strong> Melatih pelajar tentang pendawaian elektrik, kawalan motor dan pemasangan peralatan elektrik.</li><br>
+                <li><strong>Automotif:</strong> Fokus pada pembaikan enjin, sistem transmisi, dan servis kenderaan.</li><br>
+                <li><strong>Sistem Komputer (IT):</strong> Menyediakan kemahiran dalam pengaturcaraan, rangkaian komputer dan pembangunan perisian.</li><br>
+                <li><strong>Food & Beverage (F&B):</strong> Latihan dalam penyediaan makanan dan pengurusan restoran.</li><br>
+                <li><strong>Kulinari:</strong> Fokus pada seni masakan profesional dan pengendalian dapur.</li><br>
+                <li><strong>Mekatronik:</strong> Gabungan mekanikal, elektronik dan automasi industri.</li><br>
+                <li><strong>Pengurusan Pejabat:</strong> Latihan dalam tugas-tugas pentadbiran dan pengurusan pejabat.</li><br>
+                <li><strong>Kecantikan:</strong> Memberi kemahiran dalam penjagaan wajah, solekan dan terapi kecantikan.</li><br>
+                <li><strong>Pendidikan Awal Kanak-Kanak:</strong> Persediaan menjadi pendidik dalam penjagaan dan pembelajaran kanak-kanak.</li><br>
+                <li><strong>Reka Bentuk Multimedia:</strong> Mengajar reka bentuk grafik, animasi, dan produksi multimedia.</li><br>
+                <li><strong>Seni Reka Grafik:</strong> Fokus pada reka bentuk visual untuk media cetak dan digital.</li><br>
+                <li><strong>Penerbitan Video/Filem:</strong> Melatih kemahiran dalam suntingan video dan penerbitan filem.</li><br>
+                <li><strong>Pastri:</strong> Fokus pada pembuatan kek, roti dan pastri.</li><br>
+                <li><strong>Kimpalan:</strong> Memberi latihan dalam teknik kimpalan pelbagai logam.</li><br>
+                <li><strong>Jahitan:</strong> Mengajar kemahiran menjahit pakaian dan fesyen.</li><br>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; JOM TVET 2025.</p>
+    </footer>
+</body>
+</html>
