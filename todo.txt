@@ -1,0 +1,8 @@
+1. Add real leader location
+2. Add Firebase
+3. picutres of leader in leader page
+4. Full name of leaders
+5. create form for students to register
+6. create firestore database
+
+
