@@ -26,18 +26,6 @@
             max-width: 100%;
             height: auto;
         }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #004494;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: inline-block;
-        }
         .login-container {
             background: white;
             padding: 20px;
@@ -51,12 +39,33 @@
         h2 {
             margin-bottom: 20px;
         }
-        input {
-            width: 200px;
-            padding: 10px;
-            margin: 10px 0;
+        .input-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 100%;
             border: 1px solid #ccc;
             border-radius: 5px;
+            padding: 5px;
+            background: white;
+        }
+        input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            outline: none;
+            width: 85%;
+        }
+        .eye-icon {
+            padding: 10px;
+            cursor: pointer;
+            background: #ccc;
+            border-radius: 0 5px 5px 0;
+            transition: background 0.3s ease;
+        }
+        .eye-icon:hover {
+            background: #888;
+            color: white;
         }
         button {
             width: 70%;
@@ -66,8 +75,25 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            margin-top: 10px;
         }
         button:hover {
+            background-color: #0056b3;
+        }
+        .back-button {
+            display: inline-block;
+            width: 60%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            margin-top: 10px;
+        }
+        .back-button:hover {
             background-color: #0056b3;
         }
     </style>
@@ -79,33 +105,18 @@
         </div>
         <h1>JOM TVET 2025</h1>
     </header>
-    <style>
-        .back-button {
-            display: inline-block;
-            width: 60%;
-            padding: 10px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    
-        .back-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-    
-    
+
     <div class="login-container">
         <h2>Admin Login</h2>
-        <input type="password" id="passcode" placeholder="Enter Passcode" required>
-        <button onclick="checkPasscode()" style="margin-bottom: 10px;">Login</button>
+        <div class="input-container">
+            <input type="password" id="passcode" placeholder="Enter Passcode" required>
+            <span class="eye-icon" onclick="togglePassword()">👁️</span>
+        </div>
+        <button onclick="checkPasscode()">Login</button>
         <p id="error-message" style="color: red; display: none;">Incorrect Passcode!</p>
         <a href="utama.html" class="back-button">Kembali ke Utama</a>
     </div>
-    
-    
+
     <script>
         function checkPasscode() {
             var passcode = document.getElementById("passcode").value;
@@ -114,6 +125,15 @@
                 window.location.href = "data.html"; // Redirect to user data page
             } else {
                 document.getElementById("error-message").style.display = "block";
+            }
+        }
+
+        function togglePassword() {
+            var passInput = document.getElementById("passcode");
+            if (passInput.type === "password") {
+                passInput.type = "text";
+            } else {
+                passInput.type = "password";
             }
         }
     </script>
